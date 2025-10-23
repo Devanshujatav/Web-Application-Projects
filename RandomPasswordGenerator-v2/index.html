@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random-Password-Generator-V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Generate a <br><span>Secure Password</span></h1>
+        <p class="subtitle">Create strong, random passwords to keep your accounts safe</p>
+
+        <div class="display">
+            <input type="text" name="" id="password" placeholder="Click generate to create password">
+            <button type="button" class="copy-btn" id="copyBtn">
+                <span id="copyText"> 📋copy</span>
+            </button>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-label">
+                <span>password length</span>
+                <span class="strength-text" id="strengthText">
+                    -
+                </span>
+            </div>
+
+            <div class="strength-bar">
+                <div class="strength-fill" id="strength-Fill"></div>
+            </div>
+        </div>
+
+        <div class="settings">
+            <div class="setting-group">
+                <div class="setting-label">
+                    <span>Password Length</span>
+                    <span class="length-value" id="lengthValue">16</span>
+                </div>
+                <input type="range" name="" id="length" min="8" max="64" value="16">
+            </div>
+
+            <div class="setting-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" name="" id="uppercase" checked>
+                    <label for="
+                    uppercase">Uppercase (A - Z)</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" name="" id="lowercase" checked>
+                    <label for="lowercase">lowercase (a - z)</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" name="" id="numbers" checked>
+                    <label for="numbers">Numbers (0 - 9)</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" name="" id="symbols" checked>
+                    <label for="symbols">Symbols (!@#$)</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" name="" id="excludeAmbigious" checked>
+                    <label for="excludeAmbigious">Exclude Ambigious</label>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="generate-btn" id="generateBtn">
+            <span>🔐</span>
+            <span>Generate Password</span>
+        </button>
+    </div>
+
+    <div class="toast" id="toast">
+        Password copied to clipboard!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
