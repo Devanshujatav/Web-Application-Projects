@@ -149,3 +149,23 @@ input[type="range"]::-webkit-slider-thumb{
     transition: all 0.3s ease;
 }
 
+input[type="range"]::-webkit-slider-thumb:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(1, 159, 85, 0.5);
+}
+
+input[type="range"]::-moz-range-thumb{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #019f55;
+    cursor: pointer;
+    border: none;
+}
+
+
+.checkbox-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    gap: 15px;
+}
